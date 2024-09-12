@@ -1,0 +1,662 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+:root {
+    --light-gray: #d8d8d8;
+    --medium-gray: #ccc;
+    --dark-gray: #928f8f;
+    --white: #fff;
+    --light-blue: rgb(165, 220, 255);
+    --blue: rgb(169, 222, 255);
+    --dark-blue: rgb(1, 118, 156);
+    --green: rgb(214, 255, 214);
+    --light-green: rgb(166, 240, 166);
+    --teal: rgb(33, 149, 149);
+    --light-teal: rgb(194, 251, 232);
+    --text-muted: #9e9c9c;
+    --primary-color: #555;
+    --success-color: #4caf50;
+    --success-border: #a5d6a7;
+    --warning-color: #ff9800;
+    --warning-border: #f7ce91;
+    --danger-color: #f44336;
+    --danger-border: #faafaa;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    max-height: 100vh;
+}
+
+/* navbar styling starts from here */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
+}
+
+.navbar-brand-name{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand-name img{
+    width: auto;
+    max-height: 60px;
+}
+
+.navbar-brand-title{
+    margin-right: 26rem;
+    font-weight: 550;
+    font-size: 1.1rem;
+    letter-spacing: 0.3px;
+}
+
+.navbar-action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+}
+
+.navbar-action li{
+    margin: 0 15px;
+}
+
+.navbar-action > li:first-child{
+    color: red;
+    cursor: pointer;
+}
+
+.navbar-action .faq,
+.navbar-action .logout {
+    color: rgb(76, 75, 75);
+    cursor: pointer;
+}
+
+/* navbar styling ends here */
+
+.container{
+    display: flex;   
+    width: 100%;
+}
+
+/* styling of left side bar starts here */
+
+
+.left-sidebar{
+    width: 18%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
+    margin: 20px 30px 10px 30px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left-sidebar .profile{
+   padding: 15px 0px 10px 0px;
+   background-color:#f1ebeb;
+   position: relative;
+}
+
+.profile-pic-container {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-camera-container {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    width: 25px; 
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--white);
+}
+.icon-camera {
+    font-size: 14px; 
+    color: var(--primary-color); 
+}
+
+.profile h3{
+    padding-block: 8px;
+    font-size: 18px;
+}
+
+.left-sidebar-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.left-sidebar .profile{
+    text-align: center;
+}
+
+.left-sidebar ul li {
+    padding: 12px 15px 20px 15px;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.leftsidenav-links li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.leftsidenav-links li i {
+    margin-right: 20px; /* Space between icon and text */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.leftsidenav-links li span {
+    flex-grow: 1; /* Allow text to grow and center */
+    text-align: left; /* Center the text */
+}
+
+.leftsidenav-links li:nth-child(2){
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+}
+
+/* left sidenavbar styling ends here */
+
+
+/* styling of main-content starts here  */
+
+.main-content{
+    width: 60%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
+    margin: 20px 30px 10px 10px;
+    border-radius: 10px;
+}
+
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.main-navbar{
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-navbar h3{
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+
+.main-navbar h4{
+    font-size: .9rem;
+    color: var(--text-muted);
+}
+
+.main-header-btn{
+    margin-right: 20px;
+}
+
+.main-header-btn{
+   padding: 11px 22px 11px 22px;
+   background-color: transparent;
+   color: #000;
+   border: 1px solid var(--medium-gray);
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+.agenda-icon{
+    margin: 0 5px;
+}
+
+/* -----------card--------------*/
+
+.main-card{
+    margin: 10px 15px 10px 15px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.card{
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.card:nth-child(2){
+    border: 1.3px solid var(--success-color);
+}
+
+.card:nth-child(3){
+    border: 1.3px solid var(--danger-color);
+}
+
+.image-text{
+    position: absolute;
+    top: 185px;
+    right: 15px;
+    background-color: var(--white);
+    color:#000;
+    padding: 5px 5px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    z-index: 1
+}
+
+.card1-img{
+  width: 350px;
+  height: 220px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Common styles */
+.card-header-desc, .card-header-desc-2, .card-header-desc-3 {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    margin-top: -5px;
+    padding-top: 10px;
+}
+
+/* Specific styles */
+.card-header-desc {
+    background-color: rgb(206, 242, 254);
+}
+
+.card-header-desc-2 {
+    background-color: var(--green);
+}
+
+.card-header-desc-3 {
+    background-color: var(--light-teal);
+}
+
+.card-header-details{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* flex-direction: column;
+    column-gap: 4px; */
+}
+ /* common styles */
+.meeting-img, .meeting-img-2, .meeting-img-3 {
+    width: 60px;
+    height: 60px;
+    border-radius: 7px;
+    position: relative;
+    top: -42px;
+    margin: 20px 20px;
+}
+
+/* common styles */
+.meeting-img:before, .meeting-img-2:before, .meeting-img-3:before {
+    position: relative;
+    top: 50%;
+    left: 36%;
+    transform: translateY(-50%);
+    display: block;
+}
+
+/* Specific styles */
+.card-header-desc .meeting-img {
+    background-color: var(--blue);
+}
+
+.card-header-desc-2 .meeting-img-2 {
+    background-color: var(--light-green);
+}
+
+.card-header-desc-3 .meeting-img-3 {
+   background-color: var(--teal);
+}
+
+.card-header-details h3{
+    font-size: 18px;
+    font-weight: 550;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.card-header-details h4{
+    font-size: .9rem;
+    color: var(--text-muted);
+}
+
+.meeting-1, .meeting-2, .meeting-3 {
+    border-bottom: 1px solid;
+}
+
+.meeting-1 {
+    border-bottom-color: var(--medium-gray);
+}
+
+.meeting-2 {
+    border-bottom-color: var(--success-color);
+}
+
+.meeting-3 {
+    border-bottom-color: var(--danger-color);
+}
+
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    margin: 10px 15px 10px 15px;
+}
+
+.card-grid li{
+    color: var(--dark-gray);
+    font-size: .9rem;
+}
+
+.card-grid li i{
+    margin-right: 6px;
+}
+
+
+/* card-final */
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding-left: 40px 0;
+    max-width: 350px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 40px; /* Position the line */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--light-gray);
+    z-index: -1
+}
+
+.timeline-item {
+    position: relative;
+    padding-left:62px; /* Space for icon and line */
+    display: flex;
+    align-items: flex-start;
+}
+
+.status-icon {
+    position: absolute;
+    left: 30px; /* Align center of icon with the line */
+    top: 22px;
+    width: 22px;
+    height: 22px;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border: 4px solid transparent
+}
+
+.status-icon i {
+    font-size: 12px;
+}
+
+.timeline-item.completed .status-icon {
+    background-color: var(--success-color);
+    border-color: var(--success-border); /* Light green border */
+}
+
+.timeline-item.action-required .status-icon {
+    background-color: var(--danger-color);
+    border-color: var(--danger-border);
+}
+
+.timeline-item.ongoing .status-icon {
+    background-color: var(--warning-color) ;
+    border-color: var(--warning-border);
+}
+
+.content {
+    padding: 12px 2px;
+    border-radius: 8px;
+    flex-grow: 1;
+    margin-top: 10px;
+    position: relative;
+}
+
+.content h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.content p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.status-text {
+    font-weight: bold;
+}
+
+.dot {
+    display: inline-block;
+    width: 7px; 
+    height: 7px; 
+    background-color: rgb(186, 185, 185);
+    border-radius: 50%; 
+    margin: 0 6px;
+  }
+
+.timeline-item.completed .status-text {
+    color: var(--success-color);
+}
+
+.timeline-item.action-required .status-text {
+    color: var(--danger-color);
+}
+
+.timeline-item.ongoing .status-text {
+    color: var(--warning-color);
+}
+
+/* common styles */
+
+.timeline-item.completed .status-green, .status-red, .status-yellow{
+    color: #2196f3;
+    margin: 0 auto;
+    padding-left: 2px;
+}
+
+
+/* styling of main cards or main content ends here */
+
+
+/* styling for right-sidenavs starts from here */
+
+
+.right-sidenav{
+    width: 16vw;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
+    border-radius: 10px;
+    margin: 20px 30px 10px 10px;
+    height: 69vh;
+    overflow: hidden;
+}
+
+.right-side-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px 15px 10px;
+    background-color: var(--light-gray);
+
+}
+
+.right-side-description{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.right-side-description .right-side-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.right-side-description > .right-side-data:first-child{
+    border-bottom: 1px solid var(--medium-gray);
+    padding-bottom: 10px;
+}
+
+.right-side-description .citi-img{
+    width: 90px;
+}
+
+.right-side-data p{
+    padding: 10px 12px 10px 12px;
+}
+
+.right-side-data a{
+    color: rgb(161, 159, 159);
+}
+
+/* styling of righsidenav ends here */
+
+
+/* responsive design for smaller screen i.e targeting from 1200 px or less than that */
+
+@media (min-width: 800px ) and (max-width: 1250px){
+    .navbar-brand-title{
+        margin-right: 17rem;
+        font-weight: 550;
+        font-size: 0.9rem;
+    }
+    .left-sidebar{
+        /* height: 100vh; */
+        width: 25%;
+    }
+    .profile h3{
+        font-size: 16px;
+    }
+    .profile p{
+        font-size: 15px;
+    }
+    .left-sidebar ul li {
+        padding: 10px 13px 15px 13px;
+    }
+    .left-sidebar ul li span{
+        font-size: 15px;
+    }
+    .card{
+        width: 340px;
+    }
+    .main-card{
+        margin: 19px 5px 10px 5px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+    .main-navbar{
+        margin: 5px 10px 5px 10px;
+    }
+    .main-navbar h3{
+        font-size: 0.9rem;
+        font-weight: 550;
+    }
+    .main-navbar h4{
+        font-size: .7rem;
+        color: var(--text-muted);
+    }
+    .main-header-btn{
+        padding: 8px 9px 8px 9px;
+        font-size: 11px;
+     }
+    .main-header-btn{
+        margin-right: 10px;
+    }
+    
+    .card-header-details h3{
+        font-size: 15px;
+    }
+    .card-header-details h4{
+        font-size: .8rem;
+    }
+    .content h3 {
+        font-size: 14px;
+    }
+    .content p {
+        font-size: 13px;
+    }
+    .right-sidenav{
+        width: 20vw;
+        height: 52vh;
+    }    
+    .right-side-data p{
+        font-size: 15px;
+    }
+    .right-side-data a{
+        font-size: 15px;
+    }
+    .right-side-description .citi-img{
+        width: 75px;
+    }
+}
+
+
+/* responsive design for bigger screen i.e assuming if screen are greater than 1800px */
+
+@media (min-width: 1700px) and (max-width: 2400px){
+    .right-sidenav{
+        width: 16vw;
+        height: 60vh;
+    }
+    .main-content{
+        width: 70%;
+    }
+    .main-card{
+        margin: 10px 15px 10px 15px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 10px;
+        justify-items: center;
+        /* align-items: start; */
+    }
+    .profile .icon-camera{
+        top: 90px;
+        right: 110px;  
+    }
+    .navbar-brand-title{
+        margin-right: 40rem;
+    }
+    .image-text{
+        top: 180px;
+        right: 20px;
+        font-size: 0.9rem;
+    }
+}
